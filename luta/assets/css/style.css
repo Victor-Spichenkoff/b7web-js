@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background-color: rgb(10, 36, 99);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(200, 200, 200);
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 0px 2cqmax 10px rgb(70, 130, 180);
+}
+
+input, select {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.644);
+}
+
+select {
+    border-right: 10px solid white;
+}
+
+
+.bot-input {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+
+
+.start {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #DDD;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    background-color: rgb(24, 180, 24);
+
+}
+
+.start:hover {
+    transform: scale(1.1);
+}
+
+
+.restart {
+    display: none;
+    background-color: rgb(136, 7, 7);
+}
+
+
+
+.game {
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+}
+
+
+.fight-area {
+    display: flex;
+    gap: 20px;
+    min-width: 340px;
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+#char, #monster {
+    flex: 1;
+}
+
+.life-bar {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.bar {
+    height: 100%;
+    background-color: red;
+    border: 5px;
+    width: 10%;
+    border-radius: 4px 0 0 4px;
+}
+
+.bar1 {
+    background-color: rgb(22, 161, 22);
+}
+
+.attack-button {
+    padding: 7px 17px;
+    border-radius: 7px;
+    border: 0;
+    background-color: red;
+    margin-top: 7px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.log {
+    max-width: 100%;
+    border: 1px dotted #999;
+    height: 200px;
+    list-style: none;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px black;
+    padding: 10px;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+li {
+    max-width: 100%;
+}
+
+.log li::before {
+    content: '➔ ';
+}
+
+li:nth-child(even) {
+    color: rgb(95, 94, 94);
+}
+
+li:nth-child(odd) {
+    color: black;
+}
+
+@media (max-width: 500px) {
+    .game {
+        width: 100%;
+        padding: 10px;
+    }
+}

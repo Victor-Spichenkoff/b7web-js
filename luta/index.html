@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luta</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <h1>Jogo de Luta</h1>
+    
+    <div class='create'>
+        <label for="player-name"></label>
+        <input type="text" name="" id="player-name" placeholder="Nome">
+        <select name="" id="p1">
+            <option value="knight">Cavaleiro</option>
+            <option value="sorcerer">Mago</option>
+        </select>
+
+        <br>
+
+        <select name="" id="p2">
+            <option value="litle">Litle Monster</option>
+            <option value="big">Big Monster</option>
+        </select>
+
+        
+        <div class="bot-input">
+            <input type="checkbox" name="bot" id="bot">
+            <label for="bot">Bot</label>
+        </div>
+
+        <br>
+    
+        <button class="start">Começar</button>
+    </div>
+
+
+
+
+    <div class="game">
+        <div class="fight-area">
+            <div id="char">
+                <div class="life-bar">
+                    <div class="bar bar1"></div>
+                </div>
+                <strong class="name"></strong>
+                <div>
+                    <button class="attack-button">Atacar</button>
+                </div>
+            </div>
+            <div id="monster">
+                <div class="life-bar">
+                    <div class="bar"></div>
+                </div>
+                <strong class="name"></strong>
+                <div>
+                    <button class="attack-button">Atacar</button>
+                </div>
+            </div>
+        
+        </div>
+        <ul class="log">
+        </ul>
+    </div>
+
+
+    <button class="start restart">Recomeçar</button>
+
+    <script src="./assets/js/classes.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
