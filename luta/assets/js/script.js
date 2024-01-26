@@ -28,7 +28,7 @@ function selectPlayers(classe, name, monster) {
     else var char = new Sorcerer(name)
 
     if(monster == 'litle') var monster = new LittleMonster()
-    else var monster = new LittleMonster()
+    else var monster = new BigMonster()
 
 
     const bot = document.getElementById('bot').checked
