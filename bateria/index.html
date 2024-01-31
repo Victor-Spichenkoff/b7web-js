@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bateria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Bateria</h1>
+
+    <div class="keys">
+        <div id="keyq" class="key">Q</div>
+        <div id="keyw" class="key">W</div>
+        <div id="keye" class="key">E</div>
+
+        <div id="keya" class="key">A</div>
+        <div id="keys" class="key">S</div>
+        <div id="keyd" class="key">D</div>
+
+        <div id="keyz" class="key">Z</div>
+        <div id="keyx" class="key">X</div>
+        <div id="keyc" class="key">C</div>
+    </div>
+    <div class="composer">
+        <input type="text" id="input" placeholder="Faça uma composição..."/> <br>
+        <input style='margin-top: 10px' id='ms' class="input" type="number" id="input" placeholder="Tempo, em milissegundos..."/>
+        <input type='checkbox' placeholder="Infinito" id="infinito" class="input"><label for=infinito">Infinito</label>
+        <button>Tocar</button>
+    </div>
+
+    <footer>Criado por Victor Spichenkoff Santana</footer>
+
+    <audio id="s_keyq" src="./assets/audio/keyq.wav" preload="metadata"></audio>
+    <audio id="s_keyw" src="./assets/audio/keyw.wav" preload="metadata"></audio>
+    <audio id="s_keye" src="./assets/audio/keye.wav" preload="metadata"></audio>
+    <audio id="s_keya" src="./assets/audio/keya.wav" preload="metadata"></audio>
+    <audio id="s_keys" src="./assets/audio/keys.wav" preload="metadata"></audio>
+    <audio id="s_keyd" src="./assets/audio/keyd.wav" preload="metadata"></audio>
+    <audio id="s_keyz" src="./assets/audio/keyz.wav" preload="metadata"></audio>
+    <audio id="s_keyx" src="./assets/audio/keyx.wav" preload="metadata"></audio>
+    <audio id="s_keyc" src="./assets/audio/keyc.wav" preload="metadata"></audio>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

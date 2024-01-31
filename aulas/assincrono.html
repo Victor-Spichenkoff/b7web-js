@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Fetch</title>
+    <style>
+        body {
+            background-color: skyblue;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .posts {
+            display: none;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #load {
+            box-sizing: border-box;
+            width: 500px;
+            height: 500px;
+            background-color: turquoise;
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            animation: spin infinite 2s linear;
+        }
+
+        .center {
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            background-color: skyblue;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .mancha {
+            position: absolute;
+            top: 0;
+            height: 127px;
+            width: 431px;
+            background-color: black;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog</h1>
+    <button onclick="load()">Carregar</button>
+
+    <div class="posts">
+        <div id="load">
+            <div class="mancha"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <script>
+        const load = async () => {
+            const postsArea = document.querySelector('.posts')
+            postsArea.style.display = 'block'
+            const res = await fetch('https://jsonplaceholder.org/posts')
+            console.log(res)
+            const data = await res.json()
+
+            postsArea.innerHTML = `<h1>${data[0].title}</h1>
+            <div>${data[0].content}</div>`
+        }
+
+    </script>
+</body>
+</html>
