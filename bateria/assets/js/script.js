@@ -63,10 +63,9 @@ function getInputs() {
 
 var [ index, primeiranota ] = [ 0, true ]
 
-
-
 function tocarSelecionados() {
     const { letras, ms, infinito }= getInputs()
+    console.log( letras, ms, infinito)
 
     if(primeiranota) {
         primeiranota = false
@@ -90,6 +89,7 @@ function tocarSelecionados() {
 function setarValues() {
     index = 0
     primeiranota = true
+    console.log('lop')
     tocarSelecionados()
 }
 
@@ -113,7 +113,7 @@ function setarValues() {
 function emitirSomPorSelecao(key) {
     const audioTag = document.querySelector(`#s_key${key}`)
 
-    if (audioTag.k === 4) {//4 = carregou o suficiente
+    if (audioTag.readyState === 4) {//4 = carregou o suficiente
         // Reinicia a reprodução do áudio
         audioTag.currentTime = 0//resetal, mesmo se já iniciado
         audioTag.play();

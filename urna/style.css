@@ -217,6 +217,11 @@ button {
     cursor: pointer;
 }
 
+button:hover,
+.action-buttons button:hover  {
+    box-shadow: 1.3px 1.3px 0px #555;
+}
+
 .action-buttons button {
     margin: 9px;
     border: 0;
@@ -256,7 +261,6 @@ table {
 
 
 td, th {
-    
     border: 1px solid #000000;
     text-align: center;
     padding: 8px;
@@ -274,6 +278,7 @@ tr:nth-child(even) {
 
 th {
     background-color: #0047ab;
+    color: white;
 }
 
 
