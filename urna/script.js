@@ -56,7 +56,7 @@ const loadCandidateData = () => {
     if(userNumber < 9999) {//para presidente
         s('.image-vice').style.display = 'inline-block'
     } else {
-
+        s('.image-vice').style.display = 'none'
     }
 
 
