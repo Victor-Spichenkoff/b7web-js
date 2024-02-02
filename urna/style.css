@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+}
+
+.all-urna {
+    width: 100vw;
+    max-width: 884px;
+    height: 384px;
+    background-color: #dbd5c9;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 14px;
+}
+
+.display {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    max-width: 504px;
+    height: 324px;
+    background-image: linear-gradient(to right, #E8E8E8, #C1C1C1);
+    font-weight: 100;
+    position: relative;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;  */
+    border: 1px solid black;
+}
+
+.display h3 {
+    margin: 10px;
+}
+.right-left {
+    display: flex;
+}
+
+.left {
+    font-size: 17px;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.vote-to {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.left .role {
+    text-align: center;
+    margin-right: 30px;
+    text-transform: uppercase;
+}
+
+.digits {
+    margin-top: 31px;
+    display: flex;
+}
+
+.digits span {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: 2px solid black;
+    width: 32.5px;
+    height: 42.5px;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 5px;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+
+.digits span.active{
+    animation: blink 1.2s linear infinite;
+}
+.digits span.down {
+    margin-top: 12px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+.right {
+    width: 90px;
+    height: 100%;
+}
+
+.image-major, .image-vice {
+    border: 1px solid black;
+    display: flex;
+    gap: 0px;
+    flex-wrap: wrap;
+    width: 80.5px;
+}
+
+.image-major {
+    height: 143.63px;
+}
+
+.image-major .role, .image-vice .role {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    width: 80.5px;
+}
+
+img {
+    width: 100%;
+    height: 112.38px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    /* object-position: right; */
+}
+
+.image-vice {
+    float: right;
+    width: 60px;
+    height: 115.02px;
+    overflow: hidden;
+}
+
+.image-vice img {
+    height: 83.77px;
+}
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    height: 63px;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid black;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 3px;
+}
+
+
+.null {
+    font-size: 50px;
+    animation: blink 1.2s infinite;
+    margin: 20px 30px;
+}
+
+.fim, .branco {
+
+    text-align: center;
+    margin-top: 124px;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.branco {
+    text-align: start;
+    margin: 0;
+    margin-left: 30px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+
+
+/* Desativações iniciasi */
+.right, 
+.image-vice, 
+.bottom, 
+.null,
+.candidate-data {
+    display: none;
+}
+
+
+/* .right-left, .bottom {
+    display: none;
+} */
+
+
+
+
+
+
+.inputs {
+    width: 290px;
+    height: 324px;
+    background-color: #403A3A;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+button {
+    border: 0;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 0 #555;
+    font-size: 25px;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.action-buttons button {
+    margin: 9px;
+    border: 0;
+    width: 70px;
+    height: 40px;
+    box-shadow: 3px 3px 0 #555;
+    color: black;
+    font-size: 15px;
+}
+
+.white {
+    background-color: white; 
+}
+
+.fix {
+    background-color: #F09046;
+}
+.confirm {
+    box-sizing: content-box;
+    padding: 7px;
+    background-color: #48C079;
+}
+
+
+
+
+
+table {
+    margin: auto;
+    width: 500px;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+
+td, th {
+    
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #008000;
+}
+
+
+/* Estilo para linhas alternadas */
+tr:nth-child(even) {
+    background-color:  #ffd700;
+}
+
+th {
+    background-color: #0047ab;
+}
+
+
+@media (max-width: 880px) {
+    .all-urna  {
+        flex-direction: column;
+        height: auto;
+        padding: 50px  0;
+    }
+
+    .display {
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 0.2;
+    } 30% {
+        opacity: 1;
+    } 70% {
+        opacity: 1;
+    } 100% {
+        opacity: 0.2;
+    }
+}
