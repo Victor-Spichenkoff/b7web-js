@@ -74,7 +74,7 @@ h1 {
 }
 
 .slider-control:hover {
-    background-color: whitesmoke;
+    background-color: rgb(211, 209, 209);
 }
 
 
@@ -92,3 +92,24 @@ video {
     background-color: blue;
 }
 ::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+
+@media (max-width: 800px) {
+
+    body {
+        width: 100vw;
+    }
+    .slider-width {
+        width: 100vw;
+    }
+
+    .slider-item {
+        width: 100vw;
+    }
+
+    video {
+        object-position: -831px;
+    }
+}
